@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+body {
+  overflow-x: visible !important;
+  color: black;
+}
+.heading {
+  font-family: Dosis !important;
+  font-size: 80px;
+}
+.padding-header {
+  height: 20vh;
+}
+.img-header {
+  background-image: url(images/header.jpg);
+}
+.white-text {
+  color: white;
+}
+.white-text:hover {
+  color: white;
+}
+.white-text:active {
+  color: white;
+}
+.no-line {
+  text-decoration: none;
+}
