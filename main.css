@@ -4,3 +4,62 @@
 .full-width {
   width: 100%;
 }
+.yellow {
+  background-color: rgb(235, 189, 66);
+}
+.top {
+  top: 0px;
+  left: 0px;
+}
+.main-box-button {
+  background-color: rgb(235, 189, 66);
+}
+
+.container {
+  position: relative;
+}
+
+@media screen and (min-width: 200px) {
+  .container {
+    margin: 0 auto;
+    max-width: 350px;
+    width: 960px;
+  }
+  .container.is-fluid {
+    margin: 0 15px;
+    max-width: none;
+    width: auto;
+  }
+}
+@media screen and (min-width: 500px) {
+  .container {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 400px;
+  }
+  .container.is-fluid {
+    margin: 0 50px;
+    max-width: none;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 900px;
+  }
+  .container.is-fluid {
+    margin: 0 auto;
+    max-width: 900px;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1384px) {
+  .container {
+    max-width: 1344px;
+    width: 1344px;
+  }
+}
