@@ -2,3 +2,8 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+.class {
+  display:inline;
+  width:10%;
+}
