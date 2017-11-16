@@ -13,6 +13,6 @@ body {
 
 @media screen and (min-width: 1600px) {
   body {
-    background: url(https://source.unsplash.com/5120x2880/?nature) no-repeat center center fixed;
+    background: url(https://source.unsplash.com/4096x2160/?nature) no-repeat center center fixed;
   }
 }
