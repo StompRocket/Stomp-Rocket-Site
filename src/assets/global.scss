@@ -21,7 +21,7 @@ html, body, #app, .page {
   }
   a {
     color: $grey;
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   h1 {
     color: $light;
@@ -39,7 +39,7 @@ html, body, #app, .page {
       font-size: 2.5rem;
     }
     a {
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
   }
   @media screen and (min-width: 1024px) {
