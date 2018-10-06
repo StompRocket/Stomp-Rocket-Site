@@ -20,8 +20,18 @@ html, body, #app, .page {
     text-align: center;
   }
   a {
-    color: $grey;
+    color: $dark;
     font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    &:hover {
+      color: $light;
+    }
   }
   h1 {
     color: $light;
