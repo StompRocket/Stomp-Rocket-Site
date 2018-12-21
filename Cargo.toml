@@ -1,0 +1,18 @@
+[package]
+authors = ["swissChili"]
+edition = "2018"
+name = "sr-site"
+version = "0.1.0"
+[[bin]]
+name = "sr"
+path = "src/main.rs"
+
+[dependencies]
+stdweb = "0.4"
+
+[dependencies.yew]
+git = "https://github.com/DenisKolodin/yew"
+
+[lib]
+name = "sr"
+path = "src/lib.rs"

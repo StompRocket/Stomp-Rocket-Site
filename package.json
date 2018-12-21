@@ -1,33 +1,41 @@
 {
-  "name": "stomp-rocket",
+  "name": "sr-site",
   "version": "0.1.0",
-  "private": true,
+  "description": "A wasm website for StompRocket written in rust",
+  "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "fetch:blastoff": "curl https://blastoff.stomprocket.io/blastoff.scss > scss/blastoff.scss",
+    "build:rs": "cargo web deploy --release",
+    "build:scss": "node-sass --include-path scss scss/main.scss css/main.css",
+    "build:css": "postcss --use autoprefixer -o static/main.css css/main.css",
+    "build:style": "run-s build:scss build:css",
+    "build:copy": "cp static/main.css docs/ && cp target/wasm32-unknown-unknown/release/{sr.wasm,sr.js} docs/ && cp static/index.html docs/",
+    "build": "run-s restart:deploy build:rs fetch:blastoff build:style build:copy",
+    "restart:deploy": "rm -rf docs && mkdir docs",
+    "clean": "rm -rf docs",
+    "prod": "run-s build serve",
+    "serve": "serve -p 8080 docs",
+    "watch:rs": "cargo web start --release",
+
+    "start": "run-s build watch:rs"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StompRocket/Stomp-Rocket-Site.git"
+  },
+  "author": "swissChili",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StompRocket/Stomp-Rocket-Site/issues"
+  },
+  "homepage": "https://github.com/StompRocket/Stomp-Rocket-Site#readme",
   "dependencies": {
-    "minireset.css": "0.0.3",
-    "register-service-worker": "^1.0.0",
-    "vue": "^2.5.17",
-    "vue-router": "^3.0.1"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.4",
-    "@vue/cli-plugin-pwa": "^3.0.4",
-    "@vue/cli-service": "^3.0.4",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.17"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "autoprefixer": "^9.4.3",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.7",
+    "postcss-cli": "^6.1.0",
+    "serve": "^10.1.1"
+  }
 }
