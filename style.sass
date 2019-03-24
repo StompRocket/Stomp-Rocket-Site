@@ -1,0 +1,101 @@
+$bg: #23272E
+$fg: #fff
+$small-padding: 0
+$ht: IBM Plex Mono
+
+[accent="graphite"]:hover
+    border-color: #ebbd42
+
+[accent="blastoff"]:hover
+    border-color: #f15a42
+
+[accent="myst"]:hover
+    border-color: #1ad1a1
+
+[accent="math"]:hover
+    border-color: #86b2b3
+
+.mono
+    font-family: $ht
+
+.product-link
+    font-family: $ht
+    font-size: 1.3em
+    color: $fg
+    opacity: .5
+    transition: .2s ease-in-out
+
+.product-link:hover
+    opacity: 1
+
+.box p
+    font-size: 1.3em
+    font-weight: 300
+
+.wrap-box
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+
+.wrap-box > .box
+    width: calc(50% - 4em)
+    margin-bottom: 2em
+
+.box
+    border: 2px solid #888888
+    border-radius: 5px
+    transition: .2s ease-in-out
+
+h1
+    font-family: $ht
+
+h2
+    font-weight: 350
+
+@media screen and (max-width: 700px)
+    .scroll-prompt
+        display: none
+
+    .wrap-box > .box
+        width: 100%
+
+
+
+.scroll-prompt
+    position: absolute
+    font-family: $ht
+    top: calc(100vh - 3em)
+    font-size: 1.2em
+    opacity: .5
+    left: 50%
+    transform: translateX(-50%)
+
+.bold
+    font-weight: bold
+
+html,
+body
+    background: $bg
+    color: $fg
+
+.navbar.white
+    background: $bg
+    padding-top: $small-padding
+    padding-bottom: $small-padding
+    height: 8em
+
+.navbar *
+    color: $fg
+    font-family: $ht
+
+.nav-img
+    background: none
+    height: 3em
+
+.vcenter
+    display: grid
+    min-height: calc(100vh - 8em)
+
+.vcenter > .container
+    width: 100%
+    transform: translateY(-4em)

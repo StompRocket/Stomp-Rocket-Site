@@ -1,33 +1,34 @@
 {
-  "name": "stomp-rocket",
-  "version": "0.1.0",
   "private": true,
+  "name": "sr-site",
+  "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "prebuild": "",
+    "start": "npm run -s prebuild; if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "build": "preact build",
+    "serve": "preact build && preact serve",
+    "dev": "preact watch",
+    "lint": "eslint src"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-synacor"
+  },
+  "eslintIgnore": [
+    "build/*"
+  ],
+  "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-config-synacor": "^1.1.0",
+    "if-env": "^1.0.0",
+    "preact-cli": "^2.0.0"
   },
   "dependencies": {
-    "minireset.css": "0.0.3",
-    "register-service-worker": "^1.0.0",
-    "vue": "^2.5.17",
-    "vue-router": "^3.0.1"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.4",
-    "@vue/cli-plugin-pwa": "^3.0.4",
-    "@vue/cli-service": "^3.0.4",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.17"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "@stomprocket/blastoff": "^1.0.5",
+    "@stomprocket/blastoff-preact": "^0.1.0",
+    "node-sass": "^4.11.0",
+    "preact": "^8.2.1",
+    "preact-compat": "^3.17.0",
+    "sass-loader": "^7.1.0"
+  }
 }

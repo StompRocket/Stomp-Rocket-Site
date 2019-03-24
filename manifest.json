@@ -1,0 +1,16 @@
+{
+  "name": "StompRocket",
+  "short_name": "sr-site",
+  "start_url": "/",
+  "display": "browser",
+  "orientation": "portrait",
+  "background_color": "#23272E",
+  "theme_color": "#23272E",
+  "icons": [
+    {
+      "src": "/assets/sr-logo-light@2x.png",
+      "type": "image/png",
+      "sizes": "252x324"
+    }
+  ]
+}
