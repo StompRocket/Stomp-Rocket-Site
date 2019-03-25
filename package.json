@@ -28,6 +28,7 @@
     "node-sass": "^4.11.0",
     "preact": "^8.2.1",
     "preact-compat": "^3.17.0",
+    "preact-router": "^3.0.0",
     "sass-loader": "^7.1.0"
   }
 }
