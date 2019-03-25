@@ -3,23 +3,35 @@ $fg: #fff
 $small-padding: 0
 $ht: IBM Plex Mono
 
+.transition
+    transition: .2s ease-in-out
+
+p.white
+    color: #fff
+
 [accent="graphite"]:hover
     border-color: #ebbd42
+    color: #ebbd42
 
 [accent="blastoff"]:hover
     border-color: #f15a42
+    color: #f15a42
 
 [accent="myst"]:hover
     border-color: #1ad1a1
+    color: #1ad1a1
 
 [accent="math"]:hover
     border-color: #86b2b3
+    color: #86b2b3
 
 [accent="hh"]:hover
     border-color: #f1c40f
+    color: #f1c40f
 
 [accent="rooted"]:hover
     border-color: #e8d188
+    color: #e8d188
 
 .mono
     font-family: $ht
@@ -36,6 +48,9 @@ $ht: IBM Plex Mono
     text-decoration: none
     opacity: 0.75
     transition: .2s ease-in-out
+
+[accent]:hover .heading-link
+    color: inherit
 
 .heading-link:hover
     opacity: 1
@@ -75,6 +90,10 @@ h1
 h2
     font-weight: 350
 
+.sizeable
+    margin-top: 1em
+    font-size: 1.2em
+
 @media screen and (max-width: 700px)
     .scroll-prompt
         display: none
@@ -82,6 +101,16 @@ h2
     .wrap-box > .box
         width: 100%
 
+.project-info
+    font-size: 1.2em
+
+.project-info span
+    opacity: .75
+
+.infos > *:not(:last-child)
+    margin-right: 1em
+    padding-right: 1em
+    border-right: 2px solid rgba(255, 255, 255, 0.25)
 
 
 .scroll-prompt

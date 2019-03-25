@@ -15,18 +15,14 @@ export class Showcase extends Component {
 
                                     <h2 class="mono">
                                         {
-                                            i.repo ? 
-                                            <a class="heading-link" href={
-                                                        "//github.com/stomprocket/" + i.repo
-                                                }>
-                                                <img src="assets/github.svg" class="gh-icon" />
+                                            i.route ? 
+                                            <a class="heading-link" href={i.route} accent={i.accent}>
+                                                {i.title}
                                             </a>
-                                            : <span />
+                                            : i.title
                                         }
-
-                                        {i.title}
                                     </h2>
-                                    <p>
+                                    <p class="white">
                                         {i.desc}
                                     </p>
                                     {
