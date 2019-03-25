@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "prebuild": "echo 'Starting Build'",
-    "start": "npm run -s prebuild; if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "build": "preact build",
     "serve": "preact serve",
     "dev": "preact watch",
